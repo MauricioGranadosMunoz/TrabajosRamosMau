@@ -18,16 +18,16 @@ import javax.enterprise.context.RequestScoped;
 @RequestScoped
 public class Jugar extends Juego {
 
-    private String mensajeIdentificacion;
-   private boolean bloquear1_1;
-   private boolean bloquear1_2;
-   private boolean bloquear1_3;
-   private boolean bloquear2_1;
-   private boolean bloquear2_2;
-   private boolean bloquear2_3;
-   private boolean bloquear3_1;
-   private boolean bloquear3_2;
-   private boolean bloquear3_3;
+     private String mensajeIdentificacion;
+   private boolean bloquear1_1=false;
+   private boolean bloquear1_2=false;
+   private boolean bloquear1_3=false;
+   private boolean bloquear2_1=false;
+   private boolean bloquear2_2=false;
+   private boolean bloquear2_3=false;
+   private boolean bloquear3_1=false;
+   private boolean bloquear3_2=false;
+   private boolean bloquear3_3=false;
 
     public boolean isBloquear1_1() {
         return bloquear1_1;
@@ -160,20 +160,24 @@ public class Jugar extends Juego {
     }
 
     public void rondaGato() {
+         //validar();
         Gato();
-        validar();
+       
+    }
+    public void reset(){
+        Jugar.posicion1_1="";
     }
 
     public void validar() {
 
-        bloquear1_1 = !posicion1_1.isEmpty();
-        bloquear1_2 = !posicion1_2.isEmpty();
-        bloquear1_3 = !posicion1_3.isEmpty();
-        bloquear2_1 = !posicion2_1.isEmpty();
-        bloquear2_2 = !posicion2_2.isEmpty();
-        bloquear2_3 = !posicion2_3.isEmpty();
-        bloquear3_1 = !posicion3_1.isEmpty();
-        bloquear3_2 = !posicion3_2.isEmpty();
-        bloquear3_3 = !posicion3_3.isEmpty();
+        bloquear1_1 = !posicion1_1.isBlank();
+        bloquear1_2 = !posicion1_2.isBlank();
+        bloquear1_3 = !posicion1_3.isBlank();
+        bloquear2_1 = !posicion2_1.isBlank();
+        bloquear2_2 = !posicion2_2.isBlank();
+        bloquear2_3 = !posicion2_3.isBlank();
+        bloquear3_1 = !posicion3_1.isBlank();
+        bloquear3_2 = !posicion3_2.isBlank();
+        bloquear3_3 = !posicion3_3.isBlank();
     }
 }

@@ -6,9 +6,6 @@
 package com;
 
 import dao.Juego;
-import dao.Juegorepositorio;
-import java.util.ArrayList;
-import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.inject.Named;
 import javax.enterprise.context.RequestScoped;
@@ -19,16 +16,16 @@ import javax.enterprise.context.RequestScoped;
  */
 @Named(value = "verPersonas")
 @RequestScoped
-public class verGanador extends Juego{
-
+public class verGanador extends Juego {
 
     /**
      * Creates a new instance of VerPersonas
      */
     public verGanador() {
     }
+
     @PostConstruct
-public void init(){
-   // listaPersonas = Juegorepositorio.getListaPersonas();
-}
+    public void init() {
+        // listaPersonas = Juegorepositorio.getListaPersonas();
+    }
 }

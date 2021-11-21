@@ -52,10 +52,10 @@ body{
     font-weight: 500;
 }
 
-.btn-primary.juego-nuevo {
+.juego-nuevo {
     width: 300px;
     height: 60px;
-    font-size: 23px;
+    font-size: 23px !important;
     border: 2px solid brown;
     margin-top: 40px;
 }

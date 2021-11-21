@@ -73,7 +73,7 @@
                             </div>
                         </div>
                         <div style="text-align: center;">
-                            <h:commandButton id="bloquearBoton" value="INICIAR NUEVO JUEGO" action="#{jugar.resetGame()}" class="btn btn-primary">
+                            <h:commandButton id="bloquearBoton" value="INICIAR NUEVO JUEGO" action="#{jugar.resetGame()}" class="btn btn-primary juego-nuevo">
                                 <p:ajax event="blur" process="bloquearBoton" listener="#{jugar.resetGame()}" update="mensajeIdentificacion posicion1_1" />
                             </h:commandButton>
                         </div>

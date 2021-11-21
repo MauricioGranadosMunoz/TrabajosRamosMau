@@ -6,7 +6,6 @@
 package com;
 
 import dao.Juego;
-import dao.Juegorepositorio;
 import javax.inject.Named;
 import javax.enterprise.context.RequestScoped;
 
@@ -18,16 +17,16 @@ import javax.enterprise.context.RequestScoped;
 @RequestScoped
 public class Jugar extends Juego {
 
-     private String mensajeIdentificacion;
-   private boolean bloquear1_1=false;
-   private boolean bloquear1_2=false;
-   private boolean bloquear1_3=false;
-   private boolean bloquear2_1=false;
-   private boolean bloquear2_2=false;
-   private boolean bloquear2_3=false;
-   private boolean bloquear3_1=false;
-   private boolean bloquear3_2=false;
-   private boolean bloquear3_3=false;
+    private String mensajeIdentificacion;
+    private boolean bloquear1_1 = false;
+    private boolean bloquear1_2 = false;
+    private boolean bloquear1_3 = false;
+    private boolean bloquear2_1 = false;
+    private boolean bloquear2_2 = false;
+    private boolean bloquear2_3 = false;
+    private boolean bloquear3_1 = false;
+    private boolean bloquear3_2 = false;
+    private boolean bloquear3_3 = false;
 
     public boolean isBloquear1_1() {
         return bloquear1_1;
@@ -100,7 +99,6 @@ public class Jugar extends Juego {
     public void setBloquear3_3(boolean bloquear3_3) {
         this.bloquear3_3 = bloquear3_3;
     }
-   
 
     public String getMensajeIdentificacion() {
         return mensajeIdentificacion;
@@ -109,8 +107,6 @@ public class Jugar extends Juego {
     public void setMensajeIdentificacion(String mensajeIdentificacion) {
         this.mensajeIdentificacion = mensajeIdentificacion;
     }
-
-    
 
     /**
      * Creates a new instance of Ingresar
@@ -122,7 +118,7 @@ public class Jugar extends Juego {
 
     public void Gato() {
         //validar por filas
-        
+
         if (posicion1_1.equals(posicion1_2) && posicion1_1.equals(posicion1_3)) {//1,1 1,2 1,1 1,3
             calcular(posicion1_1);
         } else if (posicion2_1.equals(posicion2_2) && posicion2_1.equals(posicion2_3)) {//2,1 2,2 2,1 2,3
@@ -144,7 +140,6 @@ public class Jugar extends Juego {
         } else {
             this.mensajeIdentificacion = "Empate";
         }
-        
 
     }
 //
@@ -160,12 +155,21 @@ public class Jugar extends Juego {
     }
 
     public void rondaGato() {
-         //validar();
+        //validar();
         Gato();
-       
+
     }
-    public void reset(){
-        Jugar.posicion1_1="";
+
+    public void resetGame() {
+        posicion1_1 = null;
+        posicion1_2 = null;
+        posicion1_3 = null;
+        posicion2_1 = null;
+        posicion2_2 = null;
+        posicion2_3 = null;
+        posicion3_1 = null;
+        posicion3_2 = null;
+        posicion3_3 = null;
     }
 
     public void validar() {

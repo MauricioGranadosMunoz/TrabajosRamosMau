@@ -1,6 +1,6 @@
-dao/Juegorepositorio.class
-com/verGanador.class
-com/mycompany/primefaces/resources/JavaEE8Resource.class
-com/Jugar.class
-dao/Juego.class
-com/mycompany/primefaces/JAXRSConfiguration.class
+dao\Juego.class
+com\mycompany\primefaces\resources\JavaEE8Resource.class
+com\verGanador.class
+dao\Juegorepositorio.class
+com\Jugar.class
+com\mycompany\primefaces\JAXRSConfiguration.class

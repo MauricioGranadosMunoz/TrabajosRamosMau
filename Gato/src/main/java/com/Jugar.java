@@ -123,36 +123,47 @@ public class Jugar extends Juego {
                 calcular(posicion1_3);
             }
 
-        } else if (!posicion2_1.isEmpty() && !posicion2_2.isEmpty() && !posicion2_3.isEmpty()) {
+        } 
+        if (!posicion2_1.isEmpty() && !posicion2_2.isEmpty() && !posicion2_3.isEmpty()) {
             if (posicion2_1.equals(posicion2_2) && posicion2_1.equals(posicion2_3)) {//2,1 2,2 2,1 2,3
                 calcular(posicion2_1);
             }
 
-        } else if (!posicion3_1.isEmpty() && !posicion3_2.isEmpty() && !posicion3_3.isEmpty()) {
+        } 
+        if (!posicion3_1.isEmpty() && !posicion3_2.isEmpty() && !posicion3_3.isEmpty()) {
             if (posicion3_1.equals(posicion3_2) && posicion3_1.equals(posicion3_3)) {//3,1 3,2 3,1 3,3
                 calcular(posicion3_1);
             }
-        } else if (!posicion1_1.isEmpty() && !posicion2_1.isEmpty() && !posicion3_1.isEmpty()) {//validar columnas
+            //validar columnas
+        } 
+        if (!posicion1_1.isEmpty() && !posicion2_1.isEmpty() && !posicion3_1.isEmpty()) {
             if (posicion1_1.equals(posicion2_1) && posicion2_1.equals(posicion3_1)) {//1,1 2,1 2,1 3,1
                 calcular(posicion1_1);
             }
-            
-            
-            
-            
-        } else if (posicion1_2.equals(posicion2_2) && posicion2_2.equals(posicion3_2)) {//1,2 2,2 2,2 3,2
-            calcular(posicion1_2);
-        } else if (posicion1_3.equals(posicion2_3) && posicion2_3.equals(posicion3_3)) {//1,3 2,3 2,3 3,3
-            calcular(posicion1_3);
+        } 
+        if (!posicion1_2.isEmpty() && !posicion2_2.isEmpty() && !posicion3_2.isEmpty()) {
+            if (posicion1_2.equals(posicion2_2) && posicion2_2.equals(posicion3_2)) {//1,2 2,2 2,2 3,2
+                calcular(posicion1_2);
+            }
+        } 
+        if (!posicion1_3.isEmpty() && !posicion2_3.isEmpty() && !posicion3_3.isEmpty()) {
+            if (posicion1_3.equals(posicion2_3) && posicion2_3.equals(posicion3_3)) {//1,3 2,3 2,3 3,3
+                calcular(posicion1_3);
+            }
         } //valifar x
-        else if (posicion1_1.equals(posicion2_2) && posicion2_2.equals(posicion3_3)) {//1,1 2,2 2,2 3,3
-            calcular(posicion1_1);
-        } else if (posicion3_1.equals(posicion2_2) && posicion2_2.equals(posicion1_3)) {//3,1 2,2 2,2 1,3   
-            calcular(posicion3_1);
-        }
+         if (!posicion1_1.isEmpty() && !posicion2_2.isEmpty() && !posicion3_3.isEmpty()) {
+            if (posicion1_1.equals(posicion2_2) && posicion2_2.equals(posicion3_3)) {//1,1 2,2 2,2 3,3
+                calcular(posicion1_1);
+            }
+        } 
+         if (!posicion3_1.isEmpty() && !posicion2_2.isEmpty() && !posicion1_3.isEmpty()) {
+            if (posicion3_1.equals(posicion2_2) && posicion2_2.equals(posicion1_3)) {//3,1 2,2 2,2 1,3   
+                calcular(posicion3_1);
 
+            }
+
+        }
     }
-//
 
     public String calcular(String n) {
 //        
@@ -166,7 +177,7 @@ public class Jugar extends Juego {
     }
 
     public void rondaGato() {
-        //validar();
+        validar();
         Gato();
 
     }
